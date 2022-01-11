@@ -9,6 +9,12 @@
       "name": "Launch Application",
       "request": "launch",
       "mainClass": "com.example.services.api.Application"
+    },
+    {
+      "type": "java",
+      "name": "Launch Current File",
+      "request": "launch",
+      "mainClass": "${file}"
     }
   ]
 }
