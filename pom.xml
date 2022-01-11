@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.example.common</groupId>
+		<artifactId>services</artifactId>
+		<version>1.0.0</version>
+		<relativePath/>
+		<!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.example.services</groupId>
+	<artifactId>api</artifactId>
+	<version>1.0.0</version>
+	<name>restapi-server</name>
+	<description>Demo project for Spring Boot</description>
+	<properties>
+		<java.version>11</java.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.example.common</groupId>
+			<artifactId>jpa</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>AsposeJavaAPI</id>
+			<name>Aspose Java API</name>
+			<url>https://repository.aspose.com/repo/</url>
+			<layout>default</layout>
+			<!-- 是否开启发布版构件下载 -->
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<!-- 是否开启快照版构件下载 -->
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+</project>
