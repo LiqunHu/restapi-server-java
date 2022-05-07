@@ -23,11 +23,12 @@ public class TestController {
 	@Autowired
     private CommonUserService commonUserService;
 
-	@RequestMapping(value = "/echo", method = RequestMethod.POST)
+	@PostMapping(value = "/echo")
 	@ResponseBody
 	public ResponseResult<JSONObject> echo(@RequestBody JSONObject doc) {
 		try {
 			JSONObject rsp = new JSONObject();
+			log.info("aaaaaaaaaaaaa");
 			rsp.put("msg", doc.get("msg"));
 			return ResponseResult.buildSuccess(rsp);
 		} catch (Exception e) {
@@ -35,7 +36,7 @@ public class TestController {
 		}
 	}
 
-	@RequestMapping(value = "/findUserByPhone", method = RequestMethod.POST)
+	@PostMapping(value = "/findUserByPhone")
     @ResponseBody
     public ResponseResult<CommonUser> findUserByPgone(@RequestBody UserFindByPhoneCond UserFindByPhoneCond){
         try{

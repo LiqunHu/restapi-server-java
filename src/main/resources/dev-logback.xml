@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- For assistance related to logback-translator or configuration -->
+<!-- files in general, please contact the logback user mailing list -->
+<!-- at http://www.qos.ch/mailman/listinfo/logback-user -->
+<!-- -->
+<!-- For professional support please see -->
+<!-- http://www.qos.ch/shop/products/professionalSupport -->
+<!-- -->
+<configuration>
+	<property name="APP_NAME" value="example-api" />
+	<include resource="com/example/common/util/logger/base-logback.xml" />
+	<!-- mapper sql日志 -->
+	<logger name="com.example.services" level="DEBUG"/>
+	<root level="DEBUG">
+		<appender-ref ref="ServerDailyRollingFile" />
+		<appender-ref ref="stdout" />
+	</root>
+</configuration>
